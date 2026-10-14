@@ -1,6 +1,6 @@
 <div align="center">
   <img src="docs/logo.png" alt="VoiceStudio" width="96" />
-  <h1>VoiceStudio Pro · 深度云创科技</h1>
+  <h1>Voice-Studio Pro · 深度云创科技</h1>
   <p><strong>企业级全功能智能声音克隆、声音设计、长文本有声书制作与跨语种多角色视频配音系统</strong></p>
   <p>
     <a href="https://nav.meding.site">官方生态导航</a> ·
