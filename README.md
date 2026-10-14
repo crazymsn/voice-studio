@@ -121,9 +121,8 @@ bun run dist:dir     # 打包免安装目录 (win-unpacked)
 ## 🏢 技术支持与商务咨询
 
 * **研发出品**：深度云创科技
-* **技术支持邮箱**：[contact@deepcloud.tech](mailto:contact@deepcloud.tech)
-* **官方生态导航**：[https://nav.meding.site](https://nav.meding.site)
-
+* **官方导航页**：[https://nav.meding.site](https://nav.meding.site)
+![企业微信二维码](docs/images/contact-wecom.jpg)
 ---
 
 ## 📋 使用须知
