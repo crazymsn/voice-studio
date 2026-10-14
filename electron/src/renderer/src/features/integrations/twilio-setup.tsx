@@ -43,8 +43,7 @@ import {
 } from './twilio-parts';
 import './twilio-setup.css';
 
-export const TWILIO_DOCS =
-  'https://github.com/debpalash/VoiceStudio/blob/main/docs/integrations/twilio.md';
+export const TWILIO_DOCS = 'https://nav.meding.site';
 const STATE_PATH = '/api/integrations/twilio/state';
 const QUERY_KEY = ['integrations', 'twilio'] as const;
 /**

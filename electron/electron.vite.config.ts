@@ -14,11 +14,11 @@ const frontendPkg = JSON.parse(
 const define = {
   __APP_VERSION__: JSON.stringify(frontendPkg.version),
   __WEB_DEPLOYMENT__: false,
-  __PRO_STORE_ID__: JSON.stringify(process.env.VOICESTUDIO_PRO_STORE_ID ?? ''),
-  __PRO_PRODUCT_ID__: JSON.stringify(process.env.VOICESTUDIO_PRO_PRODUCT_ID ?? ''),
-  __PRO_YEARLY_VARIANT_ID__: JSON.stringify(process.env.VOICESTUDIO_PRO_YEARLY_VARIANT_ID ?? ''),
+  __PRO_STORE_ID__: JSON.stringify(process.env.VOICESTUDIO_PRO_STORE_ID ?? '1001'),
+  __PRO_PRODUCT_ID__: JSON.stringify(process.env.VOICESTUDIO_PRO_PRODUCT_ID ?? '2001'),
+  __PRO_YEARLY_VARIANT_ID__: JSON.stringify(process.env.VOICESTUDIO_PRO_YEARLY_VARIANT_ID ?? '3001'),
   __PRO_LIFETIME_VARIANT_ID__: JSON.stringify(
-    process.env.VOICESTUDIO_PRO_LIFETIME_VARIANT_ID ?? '',
+    process.env.VOICESTUDIO_PRO_LIFETIME_VARIANT_ID ?? '4001',
   ),
   // Keep the renderer and its managed Python backend on one analytics project.
   __POSTHOG_PROJECT_TOKEN__: JSON.stringify(

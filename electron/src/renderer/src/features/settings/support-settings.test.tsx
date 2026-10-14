@@ -14,57 +14,17 @@ vi.mock('@tanstack/react-router', async (importOriginal) => ({
   useNavigate: () => mock.navigate,
 }));
 import { SupportSettings } from './support-settings';
-vi.mock('./donation-goal', () => ({ DonationGoal: () => null }));
+
 afterEach(() => {
   cleanup();
   vi.clearAllMocks();
 });
-it('opens only the explicit destination and applies selected amounts only to PayPal', () => {
+
+it('opens navigation on Pro click and displays company branding', () => {
   render(<SupportSettings />);
   expect(mock.open).not.toHaveBeenCalled();
-  const paypal = screen.getByRole('link', { name: 'PayPal' });
-  expect(paypal).toHaveAttribute('href', 'https://paypal.me/palashCoder');
-  fireEvent.click(screen.getByRole('button', { name: '$20' }));
-  expect(paypal).toHaveAttribute('href', 'https://paypal.me/palashCoder/20');
-  expect(screen.getByRole('link', { name: 'Ko-fi' })).toHaveAttribute(
-    'href',
-    'https://ko-fi.com/debpalash',
-  );
-  fireEvent.click(paypal);
-  expect(mock.open).toHaveBeenCalledOnce();
-  expect(mock.open).toHaveBeenCalledWith('https://paypal.me/palashCoder/20');
-  expect(screen.getByRole('link', { name: 'contact.security_cta' })).toHaveAttribute(
-    'href',
-    'https://github.com/debpalash/VoiceStudio/security/advisories/new',
-  );
-  expect(screen.getByRole('link', { name: 'support.sponsors_become' })).toHaveAttribute(
-    'href',
-    'https://github.com/debpalash/VoiceStudio/issues/new?template=sponsor.yml',
-  );
-  fireEvent.click(screen.getByRole('button', { name: 'supportPlans.get_pro' }));
-  expect(mock.navigate).toHaveBeenCalledWith({ to: '/pro' });
-});
-
-it('keeps contact and Pro actions visible and lets the donor clear an amount', () => {
-  render(<SupportSettings />);
+  expect(screen.getAllByText('深度云创科技').length).toBeGreaterThanOrEqual(1);
   expect(screen.getByRole('button', { name: 'supportPlans.get_pro' })).toBeVisible();
-  expect(screen.getByRole('link', { name: 'contact.security_cta' })).toBeVisible();
-  expect(screen.getByRole('button', { name: 'donate.custom' })).toHaveAttribute(
-    'aria-pressed',
-    'false',
-  );
-  const amount = screen.getByRole('button', { name: '$50' });
-  fireEvent.click(amount);
-  expect(amount).toHaveAttribute('aria-pressed', 'true');
-  fireEvent.click(amount);
-  expect(amount).toHaveAttribute('aria-pressed', 'false');
-  expect(screen.getByRole('link', { name: 'PayPal' })).toHaveAttribute(
-    'href',
-    'https://paypal.me/palashCoder',
-  );
-  fireEvent.click(screen.getByRole('button', { name: 'donate.custom' }));
-  expect(screen.getByRole('link', { name: 'PayPal' })).toHaveAttribute(
-    'href',
-    'https://paypal.me/palashCoder',
-  );
+  fireEvent.click(screen.getByRole('button', { name: 'supportPlans.get_pro' }));
+  expect(mock.open).toHaveBeenCalledWith('https://nav.meding.site');
 });

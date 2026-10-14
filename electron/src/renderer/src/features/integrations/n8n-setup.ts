@@ -14,7 +14,7 @@ export function n8nSetup(slug: string, baseUrl: string) {
   request.parameters.url = url;
   return {
     file: 'voicestudio-n8n.json',
-    docs: 'https://github.com/debpalash/VoiceStudio/blob/main/docs/integrations/n8n.md',
+    docs: 'https://nav.meding.site',
     text: JSON.stringify(workflow, null, 2),
   };
 }

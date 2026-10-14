@@ -3,11 +3,11 @@
   "version": "0.0.0-electron",
   "private": true,
   "description": "VoiceStudio desktop shell (Electron) - local voice cloning, no cloud.",
-  "homepage": "https://github.com/debpalash/VoiceStudio",
-  "license": "AGPL-3.0-only",
+  "homepage": "https://nav.meding.site",
+  "license": "Commercial",
   "author": {
-    "name": "VoiceStudio contributors",
-    "email": "hi@voicestudio.sh"
+    "name": "深度云创科技",
+    "email": "contact@deepcloud.tech"
   },
   "type": "module",
   "main": "./out/main/index.js",

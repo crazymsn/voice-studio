@@ -36,6 +36,7 @@ const SPONSOR_REACH = {
 
 /** Lives in the content column, so it never covers the editor or its sidebar. */
 export function SponsorFooter() {
+  return null;
   const { t } = useTranslation();
   const navigate = useNavigate();
   const [inquiryOpen, setInquiryOpen] = useState(false);

@@ -35,47 +35,5 @@ async function fetchStarCount(signal: AbortSignal): Promise<number> {
 }
 
 export function GithubStar() {
-  const { t } = useTranslation();
-  const stars = useQuery({
-    // Local combined-PR previews can suppress unsolicited external requests.
-    enabled: import.meta.env.VITE_PREVIEW_OFFLINE !== '1',
-    queryKey: ['github-star-count'],
-    queryFn: ({ signal }) => fetchStarCount(signal),
-    staleTime: REFRESH_MS,
-    gcTime: REFRESH_MS,
-    refetchInterval: REFRESH_MS,
-    refetchIntervalInBackground: false,
-    retry: false,
-  });
-  return (
-    <Tooltip>
-      <TooltipTrigger
-        render={
-          <a
-            href={REPO_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={t('support.star_github')}
-            className="github-star-shortcut app-no-drag inline-flex h-8 shrink-0 items-center gap-1.5 px-2.5 text-xs font-semibold focus-visible:outline-2 focus-visible:outline-ring"
-            onClick={(event) => {
-              const bridge = getBridge();
-              if (!bridge) return;
-              event.preventDefault();
-              runRendererTask('Open GitHub', () => bridge.files.openExternal(REPO_URL));
-            }}
-          />
-        }
-      >
-        <GithubIcon className="size-3.5" />
-        <span>{t('support.star_short')}</span>
-        <span className="github-star-count">
-          <StarIcon aria-hidden="true" className="size-3" />
-          {formatCount.format(stars.data ?? BUNDLED_STARS)}
-        </span>
-      </TooltipTrigger>
-      <TooltipContent surface="theme" side="bottom">
-        {t('support.star_github')}
-      </TooltipContent>
-    </Tooltip>
-  );
+  return null;
 }

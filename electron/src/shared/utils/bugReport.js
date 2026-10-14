@@ -27,9 +27,9 @@ import { isTauri } from './updater';
 
 /** Canonical project repository — every GitHub link in the app derives from
  * this single constant so a fork/rename can never leave stale links behind. */
-export const REPO_URL = 'https://github.com/debpalash/VoiceStudio';
+export const REPO_URL = 'https://nav.meding.site';
 
-export const ISSUES_URL = `${REPO_URL}/issues/new`;
+export const ISSUES_URL = 'https://nav.meding.site';
 
 const APP_VERSION = (typeof __APP_VERSION__ !== 'undefined' && __APP_VERSION__) || 'unknown';
 

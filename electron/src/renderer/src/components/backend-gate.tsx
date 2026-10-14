@@ -40,7 +40,7 @@ interface BackendGateProps {
   repairDock?: ReactNode;
 }
 
-const RELEASES_URL = 'https://github.com/debpalash/VoiceStudio/releases/latest';
+const RELEASES_URL = 'https://nav.meding.site';
 const RETRYABLE = new Set(['crashed', 'failed', 'port_in_use']);
 const SETUP_PHASES = ['checking', 'downloading_uv', 'installing_deps', 'verifying'] as const;
 

@@ -16,8 +16,8 @@ import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import type { VoiceStudioBridge } from '../../../../preload/index.d';
 import './pro-page.css';
 
-const planUrl = (plan: string, quantity: number) =>
-  `https://voicestudio.sh/pro?plan=${plan}&quantity=${quantity}`;
+const planUrl = (_plan: string, _quantity: number) =>
+  'https://nav.meding.site';
 const plans = [
   {
     id: 'yearly',
@@ -56,8 +56,8 @@ const enterpriseFeatures = [
   'enterprise_private',
   'enterprise_support',
 ] as const;
-const TERMS_URL = 'https://voicestudio.sh/terms';
-const ENTERPRISE_URL = 'https://voicestudio.sh/commercial';
+const TERMS_URL = 'https://nav.meding.site';
+const ENTERPRISE_URL = 'https://nav.meding.site';
 type Status = Awaited<ReturnType<VoiceStudioBridge['pro']['status']>>;
 const benefits = [
   {

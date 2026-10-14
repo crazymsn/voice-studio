@@ -1,6 +1,5 @@
 import { scrubText } from './scrub';
-import { REPO_URL } from './contactLinks';
-const ISSUES_URL = `${REPO_URL}/issues/new`;
+const ISSUES_URL = 'https://nav.meding.site';
 const MAX_STACK_CHARS = 1800;
 const MAX_MSG_CHARS = 1200;
 const MAX_ENCODED_BODY = 7000;

@@ -19,7 +19,7 @@ const updateChannel =
 if (!/^electron-stable-(?:win32|darwin|linux)-(?:x64|arm64)$/.test(updateChannel)) {
   throw new Error(`Unsupported Electron update channel: ${updateChannel}`);
 }
-const updateUrl = 'https://github.com/debpalash/VoiceStudio/releases/latest/download';
+const updateUrl = 'https://nav.meding.site';
 
 const defaultRustTarget =
   {

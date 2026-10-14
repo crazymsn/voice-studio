@@ -1,4 +1,5 @@
 import { spawn } from 'node:child_process';
+import { existsSync } from 'node:fs';
 import { chmod, copyFile, mkdir } from 'node:fs/promises';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -23,23 +24,33 @@ export async function packageNativeHelper(context) {
   const platform = context.electronPlatformName;
   const target = nativeTarget(platform, Arch[context.arch]);
   const targetDir = join(root, 'target');
-  await new Promise((resolve, reject) => {
-    const child = spawn('cargo', ['build', '--locked', '--release', '--target', target], {
-      cwd: root,
-      env: { ...process.env, CARGO_TARGET_DIR: targetDir },
-      stdio: 'inherit',
-      windowsHide: true,
-    });
-    child.once('error', reject);
-    child.once('close', (code) =>
-      code === 0 ? resolve() : reject(new Error(`Native helper build failed (${code})`)),
-    );
-  });
   const name = 'voicestudio-desktop-bridge' + (platform === 'win32' ? '.exe' : '');
+  const source = join(targetDir, target, 'release', name);
   const destination = join(context.packager.getResourcesDir(context.appOutDir), 'native');
   await mkdir(destination, { recursive: true });
   const binary = join(destination, name);
-  await copyFile(join(targetDir, target, 'release', name), binary);
+
+  const cachedBinary = resolve(root, '../../electron/release/win-unpacked/resources/native', name);
+  if (!existsSync(source) && existsSync(cachedBinary)) {
+    await mkdir(dirname(source), { recursive: true });
+    await copyFile(cachedBinary, source);
+  }
+
+  if (!existsSync(source)) {
+    await new Promise((resolve, reject) => {
+      const child = spawn('cargo', ['build', '--locked', '--release', '--target', target], {
+        cwd: root,
+        env: { ...process.env, CARGO_TARGET_DIR: targetDir },
+        stdio: 'inherit',
+        windowsHide: true,
+      });
+      child.once('error', reject);
+      child.once('close', (code) =>
+        code === 0 ? resolve() : reject(new Error(`Native helper build failed (${code})`)),
+      );
+    });
+  }
+  await copyFile(source, binary);
   if (platform === 'linux') {
     await packageLinuxLibraries(join(targetDir, target, 'release', name), binary);
     await packageLinuxLibraryNotices(join(targetDir, target, 'release', name), binary);

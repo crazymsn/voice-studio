@@ -42,12 +42,11 @@ it('previews the official website only when the title is clicked', () => {
   browser.open.mockClear();
   render(<HomePage />);
   const title = screen.getByRole('link', { name: 'homeUi.title' });
-  expect(en.homeUi.title).toBe('VoiceStudio.sh Open Source');
-  expect(title).toHaveAttribute('href', 'https://voicestudio.sh');
+  expect(title).toHaveAttribute('href', 'https://nav.meding.site');
   fireEvent.mouseEnter(title);
   expect(browser.open).not.toHaveBeenCalled();
   fireEvent.click(title);
-  expect(browser.open).toHaveBeenCalledWith('https://voicestudio.sh');
+  expect(browser.open).toHaveBeenCalledWith('https://nav.meding.site');
 });
 
 it('names the feature Dubbing consistently while preserving the existing route', () => {
@@ -58,44 +57,10 @@ it('names the feature Dubbing consistently while preserving the existing route',
   expect(screen.getByRole('link', { name: /dubWorkspace.title/ })).toHaveAttribute('href', '/dub');
 });
 
-it('credits qualifying contributors and opens their GitHub profiles externally', () => {
+it('renders the enterprise branding badge for 深度云创科技', () => {
   render(<HomePage />);
-  const credits = screen.getAllByRole('listitem');
-  expect(credits).toHaveLength(homeContributors.length + 1);
-  expect(
-    [1, 2, 3].map((row) => credits.filter((credit) => credit.style.gridRow === String(row)).length),
-  ).toEqual([5, 3, 2]);
-  expect(homeContributors.every((person) => person.commits > 10)).toBe(true);
-  const all = screen.getByRole('link', { name: 'homeUi.allContributors' });
-  expect(all).toHaveAttribute(
-    'href',
-    'https://github.com/debpalash/VoiceStudio/graphs/contributors',
-  );
-  fireEvent.click(all);
-  expect(files.openExternal).toHaveBeenCalledWith(
-    'https://github.com/debpalash/VoiceStudio/graphs/contributors',
-  );
-  for (const { login } of homeContributors) {
-    if (login === 'debpalash') continue;
-    const profile = screen.getByRole('link', { name: `GitHub · @${login}` });
-    expect(profile).toHaveAttribute('href', `https://github.com/${login}`);
-    expect(profile.querySelector('img')?.src).not.toMatch(/^https?:\/\/(avatars|github)/);
-    fireEvent.click(profile);
-    expect(files.openExternal).toHaveBeenCalledWith(`https://github.com/${login}`);
-  }
-});
-
-it('opens both creator profiles from the accessible avatar card', async () => {
-  render(<HomePage />);
-  fireEvent.click(screen.getByRole('button', { name: '@debpalash' }));
-  const github = await screen.findByRole('link', { name: 'GitHub @debpalash' });
-  const x = screen.getByRole('link', { name: 'X @idebpalash' });
-  expect(github).toHaveAttribute('href', 'https://github.com/debpalash');
-  expect(x).toHaveAttribute('href', 'https://x.com/idebpalash');
-  fireEvent.click(github);
-  expect(files.openExternal).toHaveBeenCalledWith('https://github.com/debpalash');
-  fireEvent.click(x);
-  expect(files.openExternal).toHaveBeenCalledWith('https://x.com/idebpalash');
+  expect(screen.getByText('深度云创科技')).toBeInTheDocument();
+  expect(screen.getByText('VoiceStudio 官方出品')).toBeInTheDocument();
 });
 
 it('separates three primary creation actions and describes all nine destinations', () => {

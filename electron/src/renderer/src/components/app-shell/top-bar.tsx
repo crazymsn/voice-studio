@@ -22,6 +22,12 @@ export function TopBar() {
       <div className="flex min-w-0 items-center gap-2">
         <AudioLinesIcon className="size-4 text-primary" aria-hidden="true" />
         <span className="text-[13px] font-semibold tracking-tight">{t('app.name')}</span>
+        <span className="rounded bg-primary/20 px-1.5 py-0.5 text-[10px] font-bold text-primary tracking-wide border border-primary/30">
+          PRO
+        </span>
+        <span className="rounded bg-muted/80 px-1.5 py-0.5 text-[10px] font-medium text-muted-foreground border border-border/50">
+          深度云创科技
+        </span>
         <span className="text-[11px] text-muted-foreground tabular-nums">
           {t('app.version', { version: appVersion() })}
         </span>
