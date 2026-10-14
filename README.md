@@ -123,7 +123,7 @@ bun run dist:dir     # 打包免安装目录 (win-unpacked)
 * **研发出品**：深度云创科技
 * **官方导航页**：[https://nav.meding.site](https://nav.meding.site)
 
-![企业微信二维码](docs/images/contact-wecom.jpg)
+![企业微信二维码](docs/contact-wecom.jpg)
 ---
 
 ## 📋 使用须知
