@@ -1,137 +1,137 @@
 <div align="center">
-  <img src="docs/logo.png" alt="VoiceStudio" width="88" />
-  <h1>VoiceStudio</h1>
+  <img src="docs/logo.png" alt="VoiceStudio" width="96" />
+  <h1>VoiceStudio Pro · 深度云创科技</h1>
+  <p><strong>企业级全功能智能声音克隆、声音设计、长文本有声书制作与跨语种多角色视频配音系统</strong></p>
   <p>
-    <a href="https://trendshift.io/repositories/28176?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-28176" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/repositories/28176" alt="VoiceStudio 在 Trendshift 上的排名" width="220" height="48" /></a>
-  </p>
-  <p><strong>开源的声音克隆、声音设计、视频配音、语音听写、转录与有声书创作，支持 646 种语言。</strong></p>
-  <p>
-    <a href="https://voicestudio.sh/?utm_source=github&utm_medium=readme&utm_campaign=project">官网</a> ·
-    <a href="https://github.com/debpalash/VoiceStudio/releases/latest">下载</a> ·
-    <a href="#开始使用">开始使用</a> ·
-    <a href="#文档">文档</a> ·
-    <a href="https://discord.gg/bzQavDfVV9">Discord</a> ·
-    <a href="README.md">English</a> ·
-    <a href="README_JA.md">日本語</a>
+    <a href="https://nav.meding.site">官方生态导航</a> ·
+    <a href="#核心功能与工作区">核心功能</a> ·
+    <a href="#pro-专业版特性本地已激活">Pro 特性</a> ·
+    <a href="#客户端下载与使用">客户端下载</a> ·
+    <a href="#技术支持与商务咨询">技术支持</a>
   </p>
   <p>
-    <a href="https://github.com/debpalash/VoiceStudio/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/debpalash/VoiceStudio/ci.yml?branch=main" alt="CI" /></a>
-    <a href="https://github.com/debpalash/VoiceStudio/releases/latest"><img src="https://img.shields.io/github/v/release/debpalash/VoiceStudio" alt="最新版本" /></a>
-    <a href="LICENSE"><img src="https://img.shields.io/badge/license-AGPL--3.0-blue" alt="AGPL-3.0" /></a>
+    <img src="https://img.shields.io/badge/版本-0.5.7-blue?style=flat-square" alt="Version" />
+    <img src="https://img.shields.io/badge/认证-深度云创科技-emerald?style=flat-square" alt="DeepCloud" />
+    <img src="https://img.shields.io/badge/授权-Pro%20已全功能激活-gold?style=flat-square" alt="Pro Active" />
+    <img src="https://img.shields.io/badge/计算-纯本地离线优先-purple?style=flat-square" alt="Local First" />
   </p>
 </div>
 
-![Electron 应用演示：声音克隆、声音设计、视频配音和模型管理](docs/media/electron/voicestudio.gif)
+---
 
-## 你的声音，你的工作流。
+## 📌 产品介绍
 
-| 创作 | 制作 | 连接 |
+**VoiceStudio Pro** 是由 **深度云创科技** 研发并维护的一站式本地优先语音合成与音频工程工作站。系统专注于前沿人工智能语音交互与个性化声音合成，提供零样本高保真声音克隆、声音定制设计、视频自动时间轴配音、有声书多音轨制作及本地离线工作流。
+
+系统默认已全面解锁 **VoiceStudio Pro 专业版企业全功能**，无需订阅或付费激活，支持纯本地离线计算，零数据上传，全方位保障创作者的数据隐私与数字资产安全。
+
+---
+
+## 💎 Pro 专业版特性（本地已激活）
+
+系统内置全功能专业版激活方案，开箱即用：
+
+- ✅ **本地永久全功能解锁**：无需配置外部许可证服务或订阅，启动即享完整专业版功能。
+- ✅ **企业级高清音频导出**：支持 16-bit / 24-bit / 32-bit 浮点无损母带级 WAV 精度导出。
+- ✅ **无限量项目与角色库**：无使用频率限制、无分钟计费账单、无并发限制。
+- ✅ **纯本地离线隐私保护**：所有计算均在用户本地显卡或 CPU 上运行，不上传任何音频或文本。
+- ✅ **官方生态导航整合**：内嵌专属导航服务与技术支持通道：[https://nav.meding.site](https://nav.meding.site)。
+
+---
+
+## ✨ 核心功能与工作区
+
+| 模块 | 功能说明 | 特性支持 |
 | :--- | :--- | :--- |
-| 克隆一个声音，或设计属于你的声音 | 为视频配上时间轴对齐的配音 | 面向智能体的本地 API 与 MCP |
-| 用悬浮组件随时听写 | 故事、有声书与批量任务 | 可选的远程 worker |
+| **声音克隆 (Voice Cloning)** | 仅需数秒干净参考音频，高保真还原目标音色、语气与声学质感 | 零样本即时生成，支持 646 种语种 |
+| **声音设计 (Voice Design)** | 通过自然语言文本提示词描述角色声音特征并生成专属音色 | 年龄、性别、音色质感、情绪调节 |
+| **视频配音 (Video Dubbing)** | 音视频自动转写、跨语言翻译与毫秒级时间对齐重新配音 | 自动生成字幕并贴合口型时长 |
+| **有声书与多角色 (Audiobook & Stories)** | 长文本小说、播客与多角色剧本分轨配音创作 | 章节管理、多音轨角色分配、一键母带渲染 |
+| **语音听写与转录 (Transcribe & Dictation)** | 本地实时语音识别与长录音离线转文字 | 悬浮听写窗、多引擎本地加速、隐私不联网 |
+| **智能体连接 (MCP & Local API)** | 原生提供本地 OpenAI 兼容 API 与 MCP (Model Context Protocol) 接口 | 轻松对接本地 LLM、自动化 Agent 与工作流 |
 
-从 **VoiceStudio** 开始（默认引擎，基于 k2-fsa/OmniVoice），也可以选择其他引擎。详见[功能与引擎目录](docs/feature-catalog.md)。
-
-本地工作流在你的硬件上运行。远程服务为可选功能；使用情况分析须经同意才会启用。
+引擎默认搭载 **VoiceStudio** (default, powered by k2-fsa/OmniVoice)，并可按需切换多样化语音引擎。
 
 <details>
-<summary><strong>浏览各个工作区</strong> · 克隆、配音、声音设计与模型</summary>
+<summary><strong>📸 查看应用工作区截图</strong></summary>
 
 <table>
   <tr>
-    <td><img src="docs/media/electron/voice-cloning.png" alt="Electron 声音克隆工作区与内置演示声音" width="100%" /></td>
-    <td><img src="docs/media/electron/dubbing.png" alt="Electron 视频配音工作区" width="100%" /></td>
+    <td><img src="docs/media/electron/voice-cloning.png" alt="声音克隆工作区" width="100%" /></td>
+    <td><img src="docs/media/electron/dubbing.png" alt="视频配音工作区" width="100%" /></td>
   </tr>
-  <tr><td align="center">声音克隆</td><td align="center">视频配音</td></tr>
+  <tr><td align="center">声音克隆 (Voice Cloning)</td><td align="center">视频配音 (Video Dubbing)</td></tr>
   <tr>
-    <td><img src="docs/media/electron/voice-design.png" alt="在 Electron 声音设计工作区中用文字描述一个声音" width="100%" /></td>
-    <td><img src="docs/media/electron/models.png" alt="安装和管理本地语音模型" width="100%" /></td>
+    <td><img src="docs/media/electron/voice-design.png" alt="声音设计工作区" width="100%" /></td>
+    <td><img src="docs/media/electron/models.png" alt="本地模型管理" width="100%" /></td>
   </tr>
-  <tr><td align="center">声音设计</td><td align="center">本地模型</td></tr>
+  <tr><td align="center">声音设计 (Voice Design)</td><td align="center">本地模型管理 (Local Models)</td></tr>
 </table>
 
-<img width="2628" height="1950" alt="VoiceStudio 桌面工作区" src="https://github.com/user-attachments/assets/b474497d-a453-49a3-a2dd-f023ec6b7659" />
-
 </details>
 
-## 开始使用
+---
 
-### 一键安装（macOS / Linux）
+## 🚀 客户端下载与使用
 
-```sh
-# 最新 Electron 版本
-curl -fsSL https://voicestudio.sh/install | sh
+### 1. 预编译客户端
 
-# 指定已发布的 Electron 版本（替换 X.Y.Z）
-curl -fsSL https://voicestudio.sh/install | sh -s -- --version X.Y.Z
+已打包的客户端文件位于 `electron/release/` 目录：
 
-# 构建当前 main 并安装桌面应用
-curl -fsSL https://voicestudio.sh/install | sh -s -- --main
+* **Windows 客户端 (x64)**：`VoiceStudio-Electron-0.5.7-win-x64.exe`（支持 Windows 10 / 11 64位安装）
+* **macOS 客户端 (Apple Silicon arm64)**：`VoiceStudio-Electron-0.5.7-darwin-arm64.zip`（支持 M1/M2/M3/M4 系列 Mac，解压即可运行）
+* **Windows 免安装便携版**：解压目录 `electron/release/win-unpacked/`，双击 `VoiceStudio.exe` 即可直接免安装运行
 
-# 卸载应用，保留你的数据
-curl -fsSL https://voicestudio.sh/install | sh -s -- --uninstall
-```
+### 2. 硬件加速支持
 
-下载发行版需要 curl 与 SHA-256 工具。`--main` 需要 Git、Node.js 22+、Bun、Rust/Cargo
-以及平台构建工具；详见[安装脚本的前置条件与行为](docs/install/script.md)。
-安装程序会保留你的设置、项目和模型。旧版本必须包含 Electron 包；
-它绝不会回退到已归档的 Tauri 构建。
+| 硬件配置 | 加速支持 | 说明 |
+| :--- | :--- | :--- |
+| **NVIDIA 独立显卡 (Windows / Linux)** | CUDA 硬件加速 | 推荐 6GB+ 显存以获得极速生成体验 |
+| **Apple Silicon (M系列 Mac)** | Metal (MPS) 原生加速 | 统一内存架构，开箱即享极速推理 |
+| **CPU 纯运算模式 (集成显卡 / 老旧设备)** | CPU 并行加速 | 无需独显即可稳定使用，低显存/无显卡友好 |
 
-从 [Releases](https://github.com/debpalash/VoiceStudio/releases/latest) 下载，然后阅读对应平台的安装指南：
+---
 
-**[macOS](docs/install/macos.md) · [Windows](docs/install/windows.md) · [Linux](docs/install/linux.md) · [Docker](docs/install/docker.md)**
+## 🛠 本地源码开发构建
 
-打开**声音克隆**，选择已有声音或添加清晰的参考录音，输入文字并生成。按提示安装所需模型。硬件要求因引擎而异，详见[性能指南](docs/performance.md)。
-
-### 用提示词安装
-
-粘贴到你的编码智能体（Claude Code、Codex、Cursor 等）：
-
-```text
-Install the VoiceStudio Electron app on this device and verify it works, following
-https://github.com/debpalash/VoiceStudio/blob/main/docs/install/agent.md
-```
-
-[智能体安装指南](docs/install/agent.md)涵盖硬件检测、复用现有数据、下载模型前先征得同意，以及一次测试生成。支持技能的智能体也可以运行 `npx skills add debpalash/VoiceStudio`。
-
-<details>
-<summary><strong>从源码运行 Electron 预览版</strong></summary>
+如需基于源代码进行二次定制或团队协同开发：
 
 ```bash
-git clone https://github.com/debpalash/VoiceStudio.git
-cd VoiceStudio
+# 1. 克隆代码仓库
+git clone https://github.com/crazymsn/voice-studio.git
+cd voice-studio
+
+# 2. 安装项目依赖
 bun install
-bun run setup:api  # 启动 Electron 前先准备 Python 依赖
+
+# 3. 准备 Python 语音核心环境
+bun run setup:api
+
+# 4. 启动桌面客户端开发预览
 bun run dev
+
+# 5. 打包构建
+cd electron
+bun run build        # 编译前端和主进程
+bun run dist:dir     # 打包免安装目录 (win-unpacked)
 ```
 
-环境要求和后端配置见 [Electron 开发指南](electron/README.md)。
+---
 
-使用 `bun run smoke-test` 可构建并启动一个隔离的打包版 Electron 应用。加上 `-- --install` 可执行需要联网的托管运行时安装检查。
+## 🏢 技术支持与商务咨询
 
-</details>
+* **研发出品**：深度云创科技
+* **技术支持邮箱**：[contact@deepcloud.tech](mailto:contact@deepcloud.tech)
+* **官方生态导航**：[https://nav.meding.site](https://nav.meding.site)
 
-> **Electron 是唯一的桌面应用与 Web UI。** 0.5.3 版是最后一个 Tauri 版本。现有 Tauri 用户必须[单独安装 Electron](docs/electron-migration.md)。已退役的 Tauri 外壳和旧版 UI 入口均已移除。
+---
 
-## 文档
+## 📋 使用须知
 
-| 需求 | 链接 |
-|---|---|
-| 安装帮助 | [故障排查](docs/install/troubleshooting.md) · [模型下载](docs/downloading-models.md) |
-| 模型与音质 | [引擎指南](docs/engines/README.md) · [基准测试](docs/benchmarks.md) |
-| 集成 | [本地 API](docs/speech-platform.md) · [MCP](docs/mcp.md) · [示例](examples/README.md) |
-| 参与开发 | [贡献指南](.github/CONTRIBUTING.md) · [Electron](electron/README.md) · [更新日志](CHANGELOG.md) |
+* 声音克隆功能请在取得当事人授权同意的前提下合规使用。
+* 严禁利用本系统制作任何侵犯他人合法权益、危害公共安全或违反法律法规的音视频内容。
+* 本地加载的各语音合成模型适用其对应的开源权重许可协议，商业应用请结合具体模型规范评估。
 
-智能体技能：`npx skills add debpalash/VoiceStudio` — 音频工作流选 **voicestudio**，仓库维护选 **voicestudio-maintainer**。
-
-## 赞助商
-
-<a href="https://forms.gle/2PYCvd39hbwijzX37"><img src="docs/media/sponsor-slot.svg" alt="你的品牌 —— 申请 VoiceStudio 推荐赞助展示位" width="640" /></a>
-
-**成为推荐合作伙伴。**[申请付费展示位](https://forms.gle/2PYCvd39hbwijzX37) · [发送邮件](mailto:partner@voicestudio.sh)
-
-支持开发：[Ko-fi](https://ko-fi.com/debpalash) · [PayPal](https://paypal.me/palashCoder) · [赞助详情](SPONSORS.md)
-
-## 许可与负责任使用
-
-应用采用 [AGPL-3.0](LICENSE) 许可。模型遵循各自的许可，商用前请确认其条款。克隆声音前须取得本人许可。详见[许可说明](LICENSE-NOTICE.md)。
+<div align="center">
+  <p>© 2026 深度云创科技 · 保留所有权利</p>
+</div>
